@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#8546D5E8"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/num1_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number1"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:background="@android:color/white"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/num2_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:hint="Enter Number2"
+        android:padding="16dp" />
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
+        android:id="@+id/bar" />
+
+    <LinearLayout
+        android:id="@+id/operator_view"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/Add_check"
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/operator_button"
+            android:padding="8dp"
+            android:text="+"
+            android:onClick="add"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/Subtraction_check"
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/operator_button"
+            android:padding="8dp"
+            android:text="-"
+            android:onClick="sub"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/product_check"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/operator_button"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="*"
+            android:onClick="product"
+            android:textSize="32sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/operator_button"
+            android:padding="8dp"
+            android:text="/"
+            android:onClick="div"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/modulo_check"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/operator_button"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:text="%"
+            android:onClick="modulo"
+            android:textSize="32sp" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@android:color/white"
+        android:text="Result"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:onClick="reset"/>
+
+
+
+</LinearLayout>
